@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Impact auf Wish bestellt</title>
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(./img/background.jpg);
+            background-size: cover;
+            background-position: bottom;
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            font-family: 'Pixelify Sans', sans-serif;
+        }
+
+        canvas {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 5px solid #fff;
+            margin-bottom: 20px;
+            /* Abstand zwischen Canvas und Button */
+        }
+
+        #game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            font-size: 2rem;
+            padding: 1rem 2rem;
+            border: 2px solid #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Pixelify Sans', sans-serif;
+        }
+
+        button:hover {
+            background-color: white;
+            color: darkblue;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .controls {
+            margin-top: 20px;
+            color: white;
+            padding: 10px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+    </style>
+    <audio id="backgroundMusic" loop>
+        <source src="./audio/bg-music.mp3" type="audio/mp3">
+    </audio>
+    <audio id="shootSound" src="./audio/laser.mp3"></audio>
+    <audio id="hitSound" src="./audio/impact.mp3"></audio>
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="canvas" width="720" ; height="480"></canvas>
+        <div class="buttons">
+            <button onclick="startGame()">START GAME</button>
+            <button onclick="window.location.reload()">RESET GAME</button>
+        </div>
+        <div class="controls">
+            CONTROLS: <br>
+            SPACEBAR: FIRE
+            <br>
+            ARROW KEYS: MOVE UP AND DOWN
+        </div>
+    </div>
+</body>
+
+</html>
